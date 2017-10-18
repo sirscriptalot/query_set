@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if [ -f .env ]; then
+  env `cat .env` \
+  rake $*
+else
+  rake $*
+fi
